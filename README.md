@@ -1,6 +1,10 @@
 # LoRA Preset Loader for ComfyUI
 
+[![Latest release](https://img.shields.io/github/v/release/Aerobit/ComfyUI-LoRA-Preset-Loader?display_name=tag&sort=semver)](https://github.com/Aerobit/ComfyUI-LoRA-Preset-Loader/releases/latest)
+
 Save reusable, named stacks of LoRAs and apply them from one ComfyUI node. A preset remembers the LoRA files, order, enabled state, model strength, CLIP strength, and notes for a style such as **Ultra Realism**, **Cinematic**, or **Anime**.
+
+The first stable release is **v1.0.0**. See the [release notes](https://github.com/Aerobit/ComfyUI-LoRA-Preset-Loader/releases/tag/v1.0.0) or the [changelog](CHANGELOG.md) for details.
 
 ## Features
 
@@ -18,11 +22,12 @@ Save reusable, named stacks of LoRAs and apply them from one ComfyUI node. A pre
 
 ### Downloaded archive
 
-1. Download and extract the release archive.
-2. Copy the `comfyui-lora-preset-loader` folder to `ComfyUI/custom_nodes/`.
-3. Confirm this file exists: `ComfyUI/custom_nodes/comfyui-lora-preset-loader/__init__.py`.
-4. Restart ComfyUI completely.
-5. Refresh the browser with `Ctrl+F5`.
+1. Download `comfyui-lora-preset-loader-v1.0.0.zip` from the [v1.0.0 release](https://github.com/Aerobit/ComfyUI-LoRA-Preset-Loader/releases/tag/v1.0.0).
+2. Extract the release archive.
+3. Copy the `comfyui-lora-preset-loader` folder to `ComfyUI/custom_nodes/`.
+4. Confirm this file exists: `ComfyUI/custom_nodes/comfyui-lora-preset-loader/__init__.py`.
+5. Restart ComfyUI completely.
+6. Refresh the browser with `Ctrl+F5`.
 
 For Windows portable, the usual location is `ComfyUI_windows_portable/ComfyUI/custom_nodes/`.
 
