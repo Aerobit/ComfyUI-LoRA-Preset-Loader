@@ -1,0 +1,88 @@
+.lpl-dialog {
+    color-scheme: dark;
+    width: min(920px, calc(100vw - 40px));
+    max-height: calc(100dvh - 40px);
+    margin: auto;
+    padding: 0;
+    border: 1px solid #47515f;
+    border-radius: 14px;
+    background: #1b2027;
+    color: #edf0f4;
+    box-shadow: 0 24px 90px #0009;
+    font: 14px/1.5 system-ui, sans-serif;
+    overflow: auto;
+}
+.lpl-dialog::backdrop { background: #0009; }
+.lpl-dialog * { box-sizing: border-box; }
+.lpl-form { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+.lpl-header, .lpl-toolbar, .lpl-footer { display: flex; align-items: center; gap: 12px; }
+.lpl-header { justify-content: space-between; }
+.lpl-dialog h2 { margin: 0; font-size: 23px; font-weight: 650; }
+.lpl-dialog p { margin: 0; }
+.lpl-muted { color: #aeb8c6; font-size: 13px; }
+.lpl-header p { margin-top: 4px; }
+.lpl-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.lpl-label { font-size: 12px; font-weight: 600; color: #bdc8d8; }
+.lpl-toolbar { align-items: flex-end; }
+.lpl-toolbar .lpl-field { flex: 1; }
+.lpl-dialog input:not([type="checkbox"]), .lpl-dialog select, .lpl-dialog textarea {
+    width: 100%; min-width: 0; padding: 9px 10px; border: 1px solid #445060;
+    border-radius: 7px; background: #10161e; color: #edf0f4; font: inherit;
+}
+.lpl-dialog select { text-overflow: ellipsis; }
+.lpl-dialog textarea { resize: vertical; }
+.lpl-dialog input[type="checkbox"] { width: 18px; height: 18px; accent-color: #78beaa; margin: 8px 0; }
+.lpl-dialog button {
+    padding: 9px 13px; border: 1px solid #4d596a; border-radius: 7px;
+    background: #2b3441; color: #edf0f4; font: inherit; font-weight: 550; cursor: pointer;
+}
+.lpl-dialog button:hover:not(:disabled) { background: #3a485b; }
+.lpl-dialog button:disabled { opacity: .4; cursor: default; }
+.lpl-dialog :focus-visible { outline: 2px solid #92d9c2; outline-offset: 2px; }
+.lpl-dialog .lpl-primary { background: #9dd7c3; color: #142d26; border-color: #9dd7c3; }
+.lpl-dialog .lpl-primary:hover:not(:disabled) { background: #b5e7d6; }
+.lpl-dialog .lpl-danger { background: transparent; color: #ffb4b4; }
+.lpl-rows { display: flex; flex-direction: column; gap: 10px; }
+.lpl-row {
+    display: grid; grid-template-columns: 28px minmax(160px, 1fr) 160px 160px auto;
+    gap: 10px; align-items: end; padding: 12px;
+    border: 1px solid #3a4655; border-radius: 9px; background: #222a35;
+}
+.lpl-row-off { opacity: .65; }
+.lpl-row-missing { border-color: #d58c77; }
+.lpl-row-actions { display: flex; gap: 4px; }
+.lpl-row-actions button { padding: 9px; min-width: 31px; }
+.lpl-toggle { align-items: center; }
+.lpl-strength {
+    display: flex; align-items: stretch; min-width: 0; min-height: 42px;
+    border: 0; border-radius: 12px; background: #2b414f;
+}
+.lpl-strength:focus-within { box-shadow: 0 0 0 2px #7fa8c0; }
+.lpl-dialog .lpl-strength input[type="number"] {
+    flex: 1; min-width: 0; width: 0; padding: 8px 4px; text-align: left;
+    border: 0; border-radius: 0; background: transparent;
+    color: #f3f5f6; font-size: 16px; font-variant-numeric: tabular-nums;
+    appearance: textfield; -moz-appearance: textfield;
+}
+.lpl-strength input::-webkit-inner-spin-button,
+.lpl-strength input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.lpl-dialog .lpl-strength input:focus-visible { outline: none; }
+.lpl-dialog .lpl-strength button {
+    flex: 0 0 32px; padding: 0; border: 0; border-radius: 12px;
+    background: transparent; color: #a4b0b7; font-size: 24px; font-weight: 400;
+}
+.lpl-dialog .lpl-strength button:hover:not(:disabled) { background: transparent; color: #fff; }
+.lpl-empty { padding: 28px; border: 1px dashed #526176; border-radius: 9px; color: #adbacb; text-align: center; }
+.lpl-status { min-height: 22px; color: #b6d4c8; font-size: 13px; overflow-wrap: anywhere; }
+.lpl-status.lpl-error { color: #ffb4b4; }
+.lpl-footer { padding-top: 16px; border-top: 1px solid #3a4554; }
+.lpl-spacer { flex: 1; }
+@media (max-width: 850px) {
+    .lpl-form { padding: 16px; }
+    .lpl-row { grid-template-columns: 28px minmax(0, 1fr) minmax(0, 1fr); }
+    .lpl-file { grid-column: span 2; }
+    .lpl-row > .lpl-field:nth-child(3) { grid-column: 2; }
+    .lpl-row-actions { grid-column: 2 / 4; }
+    .lpl-toolbar { flex-wrap: wrap; }
+    .lpl-toolbar .lpl-field { flex-basis: 100%; }
+}
