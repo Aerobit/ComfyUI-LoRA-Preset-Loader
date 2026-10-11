@@ -12,3 +12,8 @@ node_modules/
 presets.json
 presets.json.bak
 
+
+# Private handover docs (kept local, never committed)
+CLAUDE.md
+AGENTS.md
+docs/PROJECT_PLAN.md
